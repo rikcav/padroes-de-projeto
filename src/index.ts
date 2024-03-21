@@ -1,21 +1,21 @@
-import { MyDatabaseModule } from "./creational/singleton/db/MyDatabaseModule";
+import { MyDatabaseFunction } from "./creational/singleton/db/MyDatabaseFunction";
 
-const myDatabaseModule = MyDatabaseModule;
-myDatabaseModule.add({ name: "Henrique", age: 22 });
-myDatabaseModule.add({ name: "João", age: 21 });
-myDatabaseModule.add({ name: "Maria", age: 23 });
-myDatabaseModule.show();
-
-console.log("---------------------------------------");
-myDatabaseModule.remove(1);
-myDatabaseModule.show();
+const myDatabaseFunction = MyDatabaseFunction;
+myDatabaseFunction.add({ name: "Henrique", age: 22 });
+myDatabaseFunction.add({ name: "João", age: 21 });
+myDatabaseFunction.add({ name: "Maria", age: 23 });
+myDatabaseFunction.show();
 
 console.log("---------------------------------------");
-const myDatabaseModule2 = MyDatabaseModule;
-myDatabaseModule2.add({ name: "Roberta", age: 19 });
-myDatabaseModule2.add({ name: "Jonas", age: 18 });
-myDatabaseModule2.show();
+myDatabaseFunction.remove(1);
+myDatabaseFunction.show();
 
 console.log("---------------------------------------");
-console.log("myDatabaseModule === myDatabaseModule2");
-console.log(myDatabaseModule === myDatabaseModule2);
+const myDatabaseFunction2 = MyDatabaseFunction;
+myDatabaseFunction2.add({ name: "Roberta", age: 19 });
+myDatabaseFunction2.add({ name: "Jonas", age: 18 });
+myDatabaseFunction2.show();
+
+console.log("---------------------------------------");
+console.log("myDatabaseFunction === myDatabaseFunction2");
+console.log(myDatabaseFunction === myDatabaseFunction2);
