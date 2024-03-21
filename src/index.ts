@@ -17,5 +17,5 @@ myDatabaseModule2.add({ name: "Jonas", age: 18 });
 myDatabaseModule2.show();
 
 console.log("---------------------------------------");
-console.log("myDatabaseClassic === myDatabaseClassic2");
+console.log("myDatabaseModule === myDatabaseModule2");
 console.log(myDatabaseModule === myDatabaseModule2);
