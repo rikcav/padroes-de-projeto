@@ -1,7 +1,3 @@
-Entendi, aqui está a descrição detalhada do padrão Singleton para o seu README.md, e em seguida você encontrará o código PlantUML para a representação de classe do padrão:
-
----
-
 # Singleton
 
 O padrão Singleton é um padrão de projeto criacional que garante que uma classe tenha apenas uma instância e fornece um ponto de acesso global a essa instância. Esse padrão envolve uma classe única que é responsável por criar sua própria instância e garantir que nenhuma outra instância seja criada. Ele também fornece um método estático que permite aos clientes acessar a instância única.
