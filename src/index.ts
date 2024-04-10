@@ -1,12 +1,28 @@
-import { PersonBuilder } from "./creational/builder/person/PersonBuilder";
+import { MainDishBuilder } from "./creational/builder/restaurant/classes/MainDishBuiler";
 
-const personBuilder = new PersonBuilder();
-const person1 = personBuilder.setName("Henrique").setAge(22).build();
-console.log(person1);
+const mainDishBuilder = new MainDishBuilder();
 
-personBuilder.newPerson();
-const person2 = personBuilder.setName("Maria").setAge(26).build();
-console.log(person2);
+const meal1 = mainDishBuilder
+  .makeMeal()
+  .makeBeverage()
+  .makeBeverage()
+  .makeDessert()
+  .build();
+console.log(meal1);
+console.log(meal1.getPrice());
 
-console.log(person1);
-console.log(person2);
+mainDishBuilder.reset();
+
+const meal2 = mainDishBuilder
+  .makeDessert()
+  .makeDessert()
+  .makeBeverage()
+  .build();
+console.log(meal2);
+console.log(meal2.getPrice());
+
+console.log("----------------------------------------------------------------")
+console.log(meal1);
+console.log(meal1.getPrice());
+console.log(meal2);
+console.log(meal2.getPrice());
