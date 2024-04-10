@@ -7,6 +7,6 @@ export abstract class AbstractMeal implements IMealComposite {
   ) { }
 
   getPrice(): number {
-    throw new Error("Method not implemented.");
+    return this.price;
   }
 }
