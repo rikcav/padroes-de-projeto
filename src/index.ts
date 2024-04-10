@@ -1,21 +1,12 @@
-import { MyDatabaseFunction } from "./creational/singleton/db/MyDatabaseFunction";
+import { PersonBuilder } from "./creational/builder/person/PersonBuilder";
 
-const myDatabaseFunction = MyDatabaseFunction;
-myDatabaseFunction.add({ name: "Henrique", age: 22 });
-myDatabaseFunction.add({ name: "João", age: 21 });
-myDatabaseFunction.add({ name: "Maria", age: 23 });
-myDatabaseFunction.show();
+const personBuilder = new PersonBuilder();
+const person1 = personBuilder.setName("Henrique").setAge(22).build();
+console.log(person1);
 
-console.log("---------------------------------------");
-myDatabaseFunction.remove(1);
-myDatabaseFunction.show();
+personBuilder.newPerson();
+const person2 = personBuilder.setName("Maria").setAge(26).build();
+console.log(person2);
 
-console.log("---------------------------------------");
-const myDatabaseFunction2 = MyDatabaseFunction;
-myDatabaseFunction2.add({ name: "Roberta", age: 19 });
-myDatabaseFunction2.add({ name: "Jonas", age: 18 });
-myDatabaseFunction2.show();
-
-console.log("---------------------------------------");
-console.log("myDatabaseFunction === myDatabaseFunction2");
-console.log(myDatabaseFunction === myDatabaseFunction2);
+console.log(person1);
+console.log(person2);
